@@ -8,7 +8,7 @@
     android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".RegisterUserActivity">
+    tools:context=".LoginActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
@@ -40,48 +40,23 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="Enter your email"
             android:textColorHint="@color/grey">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
                 android:layout_margin="5dp"
                 android:background="@drawable/et_bg"
-                android:gravity="center_vertical"
-                android:drawableStart="@drawable/name_icon"
-                android:drawableTint="@color/white"
-                android:drawablePadding="15dp"
-                android:layout_marginTop="30dp"
                 android:padding="5dp"
-                android:hint="Enter your name"
-                android:textSize="18sp"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/grey">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextTextEmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:ems="10"
-                android:background="@drawable/et_bg"
                 android:gravity="center_vertical"
+                android:textSize="18sp"
                 android:drawableStart="@drawable/email"
-                android:drawableTint="@color/white"
                 android:drawablePadding="15dp"
-                android:layout_marginTop="30dp"
-                android:padding="5dp"
-                android:hint="Enter you email"
-                android:textSize="18sp"
-                android:inputType="textEmailAddress" />
+                android:drawableTint="@color/white"
+                android:inputType="textEmailAddress"/>
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -91,11 +66,9 @@
             android:hint="Enter your password">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/password_lp_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/et_bg"
                 android:ems="10"
                 android:gravity="center_vertical"
                 android:padding="5dp"
@@ -108,13 +81,24 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/forgot_password_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="end"
+        android:text="Forgot your password?"
+        android:textColor="@color/grey"
+        android:textStyle="bold"/>
+
     <Button
-        android:id="@+id/register_btn"
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_gravity="center_horizontal"
-        android:text="Register" />
+        android:textStyle="bold"
+        android:text="Login" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -127,16 +111,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/grey"
-            android:text="Already have an account?"/>
+            android:text="Don't have an account?"/>
 
         <TextView
-            android:id="@+id/login_rp_btn"
+            android:id="@+id/register_lp_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/grey"
             android:textStyle="bold"
-            android:text="LOGIN"/>
+            android:text="REGISTER"/>
 
     </LinearLayout>
 
